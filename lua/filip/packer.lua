@@ -47,4 +47,8 @@ return require('packer').startup(function(use)
             require("auto-save").setup { }
         end,
     })
+
+    use ('mattn/emmet-vim')
+    use ('github/copilot.vim')
+    use ('tpope/vim-unimpaired')
 end)
