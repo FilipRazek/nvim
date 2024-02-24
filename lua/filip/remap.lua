@@ -14,3 +14,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>ko<tab>")
+vim.keymap.set("i", "[<CR>", "[<CR>]<Esc>ko<tab>")
+vim.keymap.set("i", "(<CR>", "(<CR>)<Esc>ko<tab>")
