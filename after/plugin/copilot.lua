@@ -9,5 +9,5 @@ local function SuggestOneWord()
   return vim.split(bar,  '[ .]\zs')[0]
 end
 
-vim.keymap.map('i', '<C-l>', SuggestOneCharacter, {expr = true, remap = false})
-vim.keymap.map('i', '<C-left>', SuggestOneWord, {expr = true, remap = false})
+vim.keymap.set('i', '<C-l>', SuggestOneCharacter, {expr = true, remap = false})
+vim.keymap.set('i', '<C-left>', SuggestOneWord, {expr = true, remap = false})
