@@ -51,4 +51,16 @@ return require('packer').startup(function(use)
     use ('mattn/emmet-vim')
     use ('github/copilot.vim')
     use ('tpope/vim-unimpaired')
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', 
+        },
+    }
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    use { 'joeveiga/ng.nvim'}
 end)
