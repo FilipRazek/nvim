@@ -63,4 +63,5 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
     use { 'joeveiga/ng.nvim'}
+    use { "nvim-treesitter/nvim-treesitter-angular" }
 end)

@@ -7,7 +7,6 @@ require('mason-lspconfig').setup({
 		lsp.default_setup,
 	},
 })
-
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
 
@@ -24,6 +23,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+lsp.setup('angularls')
 
 function truncate(element, max_length)
 	local truncated = vim.fn.strcharpart(element, 0, max_length)
@@ -60,4 +60,5 @@ cmp.setup({
 		end,
 	},
 })
+
 
