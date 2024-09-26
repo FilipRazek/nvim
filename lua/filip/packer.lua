@@ -50,16 +50,21 @@ return require('packer').startup(function(use)
     use ('github/copilot.vim')
     use ('tpope/vim-unimpaired')
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', 
-        },
-    }
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-    use { 'joeveiga/ng.nvim'}
-    use { "nvim-treesitter/nvim-treesitter-angular" }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+    use({
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup()
+        end,
+    })
 end)

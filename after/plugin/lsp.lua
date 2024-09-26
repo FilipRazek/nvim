@@ -2,7 +2,7 @@ local lsp = require("lsp-zero")
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = {'tsserver', 'rust_analyzer'},
+	ensure_installed = {'rust_analyzer'},
 	handlers = {
 		lsp.default_setup,
 	},
