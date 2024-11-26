@@ -17,3 +17,4 @@ vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>ko<tab>")
 vim.keymap.set("i", "[<CR>", "[<CR>]<Esc>ko<tab>")
 vim.keymap.set("i", "(<CR>", "(<CR>)<Esc>ko<tab>")
 
+vim.keymap.set("n", "<leader>yf", ':let @+ = expand("%:p")<CR>', { noremap = true, silent = true })
