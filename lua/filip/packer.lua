@@ -10,11 +10,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use ({
-        'rose-pine/neovim',
-        name = 'rose-pine',
-        config = function() vim.cmd('colorscheme rose-pine') end
-    })
+    use ( 'rose-pine/neovim' )
 
     use ('ThePrimeagen/harpoon')
     use ('mbbill/undotree')
@@ -46,14 +42,9 @@ return require('packer').startup(function(use)
         end,
     })
 
-    use ('mattn/emmet-vim')
     use ('github/copilot.vim')
     use ('tpope/vim-unimpaired')
 
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
