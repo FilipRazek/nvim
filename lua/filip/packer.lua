@@ -61,10 +61,5 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-    use({
-        "stevearc/oil.nvim",
-        config = function()
-            require("oil").setup()
-        end,
-    })
+    use( "stevearc/oil.nvim" )
 end)
