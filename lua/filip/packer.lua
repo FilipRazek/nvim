@@ -53,4 +53,9 @@ return require('packer').startup(function(use)
         end,
     }
     use( "stevearc/oil.nvim" )
+    use {
+        'neoclide/coc.nvim',
+        branch = 'release',
+        run = 'yarn install --frozen-lockfile'
+    }
 end)
